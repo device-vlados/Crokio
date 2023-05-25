@@ -77,10 +77,10 @@ html, body {
     background-color: #F6F6F6;
 }
 .main__progress {
-    padding: 180px 0 90px 0;
+    padding: 50px 0 90px 0;
 }
 .main__after {
-    padding: 90px 0 90px 0;
+    padding: 50px 0 90px 0;
     background-color: #F6F6F6;
 }
 .main__offer {
@@ -88,20 +88,20 @@ html, body {
     background-color: #F6F6F6;
 }
 .main__service {
-    padding: 100px 0 170px 0;
+    padding: 50px 0 170px 0;
 }
 .main__build {
     padding: 0 0 100px 0;
 }
 .main__testimonials {
-    padding: 80px 0 100px 0;
+    padding: 50px 0 100px 0;
 }
 .main__case {
-    padding: 100px 0 100px 0;
+    padding: 50px 0 100px 0;
     background-color: #F6F6F6;
 }
 .main__crokio {
-    padding: 100px 0 120px 0;
+    padding: 50px 0 70px 0;
 }
 .main__outcomes {
     padding: 0 0 120px 0;
@@ -1085,6 +1085,8 @@ html, body {
 .busines__button:hover {
     box-shadow: 5px 5px 0px #0b0b0b;
 }
+/* ===================================FOOTER=============================== */
+
 /* ===================================FOOTER=============================== */
 .footer {
     background-color: #111111;
