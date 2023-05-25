@@ -77,10 +77,7 @@ html, body {
     background-color: #F6F6F6;
 }
 .main__progress {
-    padding: 50px 0 90px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 180px 0 90px 0;
 }
 .main__after {
     padding: 90px 0 90px 0;
@@ -312,212 +309,120 @@ html, body {
     color: #2468ff;
 }
 /* ===================================PROGRESS=============================== */
-.container {
-}
-.progress__inner {
-    min-width: 1000px;
-    width: 100%;
+:root {
+    background-color: #fff;
+    --light-grey: #fff;
+    --accent-color: #0b0b0b;
+    --light-blue: #2468ff;
 }
 .progress__content {
-    max-width: 1300px;
-    padding: 0 30px;
-    margin: 0 auto;
+    margin-bottom: 170px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 90px;
+    text-align: center;
 }
-.progress__content__title {
-    min-width: 400px;
-    margin-right: 50px;
+.containerp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-.progress__content-text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    color: rgba(0, 0, 0, 0.8);
-}
-.progress__inner .steps {
+.progress-container {
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 60px;
+    max-width: 100%;
+    width: 750px;
 }
-.steps .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    color: #0b0b0b00;
-    background-color: #fff;
-    font-size: 22px;
-    font-weight: 700;
-    border-radius: 50%;
-    border: 2px solid #0b0b0b44;
-    transition: all .3s;
-}
-.steps .circle.active {
-    border-color: rgba(0, 0, 0, 0.8);;
-    color: rgba(0, 0, 0, 0.8);;
-    transition: all .7s;
-}
-.a::before {
-    content: "We actively listen to your needs and goals. Clearly define the specific objectives and outcomes you want to achieve through your digital marketing efforts.";
+.progress-container::before {
+    content: "";
+    background-color: var(--light-grey);
     position: absolute;
-    top: 90px;
-    left: -100px;
-    width: 250px;
-    height: 140px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-}
-.a::after {
-    content: "Set Goals";
-    position: absolute;
-    top: 55px;
-    left: -100px;
-    width: 250px;
-    height: 140px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-}
-.b::before {
-    content: "Create a comprehensive plan that outlines the tactics and channels you will use to achieve your goals.";
-    position: absolute;
-    top: 90px;
-    left: 220px;
-    width: 250px;
-    height: 140px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-    transition: all .3s;
-}
-.b::after {
-    content: "Strategy Development";
-    position: absolute;
-    top: 55px;
-    left: 220px;
-    width: 250px;
-    height: 140px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-    transition: all .3s;
-}
-.c::before {
-    content: "Execute your digital presence initiatives and continuously improve them based on data and insights.";
-    position: absolute;
-    top: 90px;
-    right: 215px;
-    width: 250px;
-    height: 140px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-        transition: all .3s;
-}
-.c::after {
-    content: "Implementation & Optimization";
-    position: absolute;
-    top: 55px;
-    right: 162px;
-    width: 350px;
-    height: 140px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-        transition: all .3s;
-}
-.d::before {
-    content: "With our help, you'll get new customers, increased brand awareness, and higher sales. You'll be able to enjoy the benefits of your partnership with us, knowing that your business is growing and thriving.";
-    position: absolute;
-    top: 90px;
-    right: -100px;
-    width: 250px;
-    height: 180px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-        transition: all .3s;
-}
-.d::after {
-    content: "Get a Results";
-    position: absolute;
-    top: 55px;
-    right: -100px;
-    width: 250px;
-    height: 140px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: -0.019em;
-    text-align: center;
-        transition: all .3s;
-}
-.progress-bar {
-    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     height: 2px;
     width: 100%;
-    background-color: #F6F6F6;
     z-index: -1;
 }
-.indicator {
+.progress {
+    background-color: var(--accent-color);
     position: absolute;
-    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 2px;
     width: 0%;
-    background: #2468ff;
-    transition: all .7s;
+    z-index: -1;
+    transition: .4s ease;
 }
-.buttons {
-    display: block;
-    justify-content: center;
+.circle {
+    background: var(--light-grey);
+    color: var(--light-grey);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    display: flex;
     align-items: center;
-    gap: 20px;
-    margin-top: 250px;
+    justify-content: center;
+    border: 3px solid var(--light-grey);
+    transition: .4s ease;
 }
-.buttons button {
+.circle.active {
+    border-color: var(--accent-color);
+    background-color: #fff;
+    color: var(--accent-color);
+    scale: 1.1;
+}
+.circle .icon {
+
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    bottom: 25px;
+    width: 200px;
+}
+.circle .caption {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 700;
+    bottom: -30px;
+}
+.bttn {
     color: #0b0b0b;
-    display: block;
     text-align: center;
     background-color: #fff;
     border: 2px solid #121212;
     border-radius: 5px;
-    padding: 10px 27px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
+    padding: 8px 27px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
     transition: all .3s;
+    margin-right: 20px;
 }
-.buttons button:active {
+.bttn:hover {
     box-shadow: 5px 5px 0px #2468ff;
 }
-.buttons button:hover {
-    box-shadow: 5px 5px 0px #2468ff;
+
+.bttn:active {
+    transform: scale(0.9);
 }
-.buttons button:disabled {
-    opacity: 0.6;
+.bttn:focus {
+    outline: 0;
+}
+.bttn:disabled {
+    opacity: 0.3;
+    background-color: var(--light-grey);
     cursor: not-allowed;
-    box-shadow: none;
+}
+.bttn:disabled:hover {
+    box-shadow: 0px 0px 0px #fff;
 }
 /* ===================================AFTER=============================== */
 .after__inner {
@@ -858,7 +763,6 @@ html, body {
     right: 30px;
     fill: #0b0b0b;
     background-color: #fff;
-    padding: 48px 15px 0 0;
     z-index: 5;
     transition: all .3s;
 }
@@ -869,8 +773,8 @@ html, body {
     content: " ";
     display: block;
     position: absolute;
-    right: 3px;
-    top: 36px;
+    right: -10px;
+    top: -12px;
     width: 48px;
     height: 48px;
     background-color: #fff;
@@ -882,8 +786,8 @@ html, body {
     content: " ";
     display: block;
     position: absolute;
-    right: 3px;
-    top: 36px;
+    right: -12px;
+    top: -12px;
     width: 48px;
     height: 48px;
     background-color: #fff;
@@ -975,7 +879,7 @@ html, body {
     right: 50px;
     fill: #0b0b0b;
     background-color: #F6F6F6;
-    padding: 48px 15px 0 0;
+    /* padding: 48px 15px 0 0; */
     z-index: 5;
     transition: all .3s;
 }
@@ -988,8 +892,8 @@ html, body {
     content: " ";
     display: block;
     position: absolute;
-    right: 3px;
-    top: 36px;
+    right: -10px;
+    top: -12px;
     width: 48px;
     height: 48px;
     background-color: #F6F6F6;
@@ -1001,8 +905,8 @@ html, body {
     content: " ";
     display: block;
     position: absolute;
-    right: 3px;
-    top: 36px;
+    right: -12px;
+    top: -12px;
     width: 48px;
     height: 48px;
     background-color: #F6F6F6;
@@ -1315,140 +1219,6 @@ html, body {
 }
 /* ===================================1250=============================== */
 @media (max-width: 1250px) {
-    .progress__inner {
-        min-width: 800px;
-        width: 100%;
-    }
-    .progress__content {
-        margin-bottom: 250px;
-    }
-    .progress__content__title {
-        margin-right: 30px;
-    }
-    .steps .circle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        width: 50px;
-        color: #0b0b0b00;
-        background-color: #fff;
-        font-size: 22px;
-        font-weight: 700;
-        border-radius: 50%;
-        border: 2px solid #0b0b0b44;
-        transition: all .3s;
-    }
-    .a::before {
-        content: "We actively listen to your needs and goals. Clearly define the specific objectives and outcomes you want to achieve through your digital marketing efforts.";
-        position: absolute;
-        top: 90px;
-        left: -80px;
-        width: 200px;
-        height: 140px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-    }
-    .a::after {
-        content: "Set Goals";
-        position: absolute;
-        top: 55px;
-        left: -100px;
-        width: 250px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-    }
-    .b::before {
-        content: "Create a comprehensive plan that outlines the tactics and channels you will use to achieve your goals.";
-        position: absolute;
-        top: 90px;
-        left: 180px;
-        width: 200px;
-        height: 140px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-        transition: all .3s;
-    }
-    .b::after {
-        content: "Strategy Development";
-        position: absolute;
-        top: 55px;
-        left: 155px;
-        width: 250px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-        transition: all .3s;
-    }
-    .c::before {
-        content: "Execute your digital presence initiatives and continuously improve them based on data and insights.";
-        position: absolute;
-        top: -175px;
-        right: 170px;
-        width: 200px;
-        height: 140px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-            transition: all .3s;
-    }
-    .c::after {
-        content: "Implementation & Optimization";
-        position: absolute;
-        top: -80px;
-        right: 120px;
-        width: 300px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-            transition: all .3s;
-    }
-    .d::before {
-        content: "With our help, you'll get new customers, increased brand awareness, and higher sales. You'll be able to enjoy the benefits of your partnership with us, knowing that your business is growing and thriving.";
-        position: absolute;
-        top: -235px;
-        right: -75px;
-        width: 200px;
-        height: 180px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-            transition: all .3s;
-    }
-    .d::after {
-        content: "Get a Results";
-        position: absolute;
-        top: -45px;
-        right: -100px;
-        width: 250px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: center;
-            transition: all .3s;
-    }
     /* --------------------------------------------- */
     .after__content {
         max-width: 500px;
@@ -1461,7 +1231,7 @@ html, body {
     .service__row {
         display: grid;
         justify-content: center;
-        grid-template: repeat(4,auto) / repeat(1, 500px);
+        grid-template: repeat(4,auto) / repeat(1, 600px);
         gap: 20px;
     }
     /* --------------------------------------------- */
@@ -1582,167 +1352,35 @@ html, body {
         margin-right: 20px;
     }
     /* --------------------------------------------- */
-    /* .progress__inner {
-        height: 800px;
-        height: 100%;
-    }
     .progress__content {
-        margin-bottom: 250px;
+        margin-bottom: 30px;
     }
-    .progress__content__title {
-        margin-right: 30px;
-    }
-    .progress__inner .steps {
-        position: relative;
+    .containerp {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        text-align: center;
     }
-    .steps .circle {
-        display: flex;
+    .progress-container {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 50px;
-        width: 50px;
-        color: #0b0b0b00;
-        background-color: #fff;
-        font-size: 22px;
-        font-weight: 700;
-        border-radius: 50%;
-        border: 2px solid #0b0b0b44;
-        transition: all .3s;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
+        height: 100%;
+        height: 250px;
     }
-    .circle:last-child {
-        margin-bottom: 0;
-    }
-    .a::before {
-        content: "We actively listen to your needs and goals. Clearly define the specific objectives and outcomes you want to achieve through your digital marketing efforts.";
-        position: absolute;
-        top: 0px;
-        left: 160px;
-        width: 200px;
-        height: 140px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 130%;
-        letter-spacing: -0.019em;
-        text-align: end;
-    }
-    .a::after {
-        content: "Set Goals";
-        position: absolute;
-        top: -35px;
-        left: 160px;
-        width: 200px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: end;
-    }
-    .b::before {
-        content: "Create a comprehensive plan that outlines the tactics and channels you will use to achieve your goals.";
-        position: absolute;
-        top: 130px;
-        left: 440px;
-        width: 200px;
-        height: 140px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 130%;
-        letter-spacing: -0.019em;
-        text-align: start;
-        transition: all .3s;
-    }
-    .b::after {
-        content: "Strategy Development";
-        position: absolute;
-        top: 92px;
-        left: 440px;
-        width: 250px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: start;
-        transition: all .3s;
-    }
-    .c::before {
-        content: "Execute your digital presence initiatives and continuously improve them based on data and insights.";
-        position: absolute;
-        top: 265px;
-        right: 440px;
-        width: 200px;
-        height: 140px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: end;
-        transition: all .3s;
-    }
-    .c::after {
-        content: "Implementation & Optimization";
-        position: absolute;
-        top: 198px;
-        right: 440px;
-        width: 300px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 130%;
-        letter-spacing: -0.019em;
-        text-align: end;
-        transition: all .3s;
-    }
-    .d::before {
-        content: "With our help, you'll get new customers, increased brand awareness, and higher sales. You'll be able to enjoy the benefits of your partnership with us, knowing that your business is growing and thriving.";
-        position: absolute;
-        top: 370px;
-        right: -40px;
-        width: 400px;
-        height: 180px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: start;
-        transition: all .3s;
-    }
-    .d::after {
-        content: "Get a Results";
-        position: absolute;
-        top: 330px;
-        right: 110px;
-        width: 250px;
-        height: 140px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: -0.019em;
-        text-align: start;
-            transition: all .3s;
-    }
-    .progress-bar {
+    .progress {
         display: none;
     }
-    .indicator {
+    .circle .icon {
         display: none;
     }
-    .buttons {
-        display: flex;
-        font-display: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0px;
+    .circle .caption {
+        font-size: 16px;
+        bottom: -25px;
     }
-    .buttons button {
-    } */
+    .bttn:last-child {
+        margin-right: 0;
+    }
     /* --------------------------------------------- */
     .after__inner {
         display: flex;
@@ -1878,6 +1516,9 @@ html, body {
         line-height: 100%;
     }
     /* --------------------------------------------- */
+    .service__row {
+        grid-template: repeat(4,auto) / repeat(1, 500px);
+    }
     .service__row-item {
         width: 480px;
         height: 530px;
@@ -2205,10 +1846,23 @@ html, body {
     .busines__buttons {
         margin: 0 0 15px 0;
     }
-
+    /* --------------------------------------------- */
     .service__row {
         /* display: flex; */
         justify-content: center;
+    }
+    /* --------------------------------------------- */
+    .header__btn-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width: 140px;
+    }
+    .header__talent-btn {
+        margin-right: 0;
+        margin-bottom: 15px;
+        transition: all .3s;
     }
 }
 /* ===================================360=============================== */

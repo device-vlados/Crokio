@@ -1,24 +1,44 @@
-const circles = document.querySelectorAll(".circle"),
-    progressBar = document.querySelector(".indicator"),
-    buttons = document.querySelectorAll("button");
-let currentStep = 1;
-const updateSteps = (e) => {
-    currentStep = e.target.id === "next" ? ++currentStep : --currentStep;
-    circles.forEach((circle, index) => {
-        circle.classList[`${index < currentStep ? "add" : "remove"}`]("active");
-    });
-    progressBar.style.width = `${((currentStep - 1) / (circles.length - 1)) * 100}%`;
-    if (currentStep === circles.length) {
-        buttons[1].disabled = true;
-    } else if (currentStep === 1) {
-    buttons[0].disabled = true;
-    } else {
-    buttons.forEach((button) => (button.disabled = false));
+const progress = document.getElementById('progress');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const cricles = document.querySelectorAll('.circle')
+
+let currentActive = 1;
+
+next.addEventListener('click', () => {
+    if (currentActive < cricles.length) {
+        currentActive++;
     }
-};
-buttons.forEach((button) => {
-    button.addEventListener("click", updateSteps);
+    update();
 });
+
+prev.addEventListener('click', () => {
+    if (currentActive > 1) {
+        currentActive--;
+    }
+    update();
+});
+
+function update() {
+    cricles.forEach((circle, idx) => {
+        if (idx < currentActive) {
+            circle.classList.add('active');
+        } else {
+            circle.classList.remove('active');
+        }
+    });
+
+    progress.style.width = ((currentActive - 1) / (cricles.length - 1)) * 100 + "%";
+
+    if(currentActive === 1) {
+        prev.disabled = true;
+    } else if (currentActive === cricles.length) {
+        next.disabled = true;
+    } else {
+        prev.disabled = false;
+        next.disabled = false;
+    }
+}
 
 $(function () {
 // -----------------------------------------------------------------------------
