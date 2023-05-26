@@ -40,6 +40,7 @@ function update() {
     }
 }
 
+
 $(function () {
 // -----------------------------------------------------------------------------
     $('.testimonials__slider').slick({
@@ -87,4 +88,10 @@ $(function () {
         e.preventDefault()
         $('.header__nav').toggleClass('header__nav--open')
     })
-})
+
+    $('.prices-btn').on('click', function (e) {
+        e.preventDefault()
+        $('.popup-bg').toggleClass('popup-bg--open')
+    })
+
+});
