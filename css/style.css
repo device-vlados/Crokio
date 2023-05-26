@@ -1370,6 +1370,9 @@ html, body {
     transition: all .3s;
     margin-top: 20px;
 }
+.price-btn:hover {
+    box-shadow: 5px 5px #2468ff;
+}
 .price-button {
     color: #fff;
     text-align: center;
@@ -1382,6 +1385,9 @@ html, body {
     line-height: 22px;
     transition: all .3s;
     margin-top: 20px;
+}
+.price-button:hover {
+    box-shadow: 5px 5px #2468ff;
 }
 /* -------------------------------cards3----------------------------- */
 .card-thr {
@@ -1590,72 +1596,210 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-/* -----------------------------------DISC(redact card)---------------------------
-.container-cards {
+
+/* ===================================MAINTENANCE=============================== */
+.main__maintenance {
+    padding: 50px 0 80px 0;
+}
+.maintenance__content__title {
+    margin-bottom: -4px;
+}
+.maintenance__content-text {
+    max-width: 600px;
+}
+.maintenance__info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.maintenance__info-box {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.card__disc {
-    width: 220px;
-    height: 250px;
-    background: #F6F6F6;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 2px solid #0b0b0b;
-    -webkit-box-shadow: 5px 5px #2468ff;
-            box-shadow: 5px 5px #2468ff;
-    overflow: hidden;
-    margin-right: 100px;
+.maintenance__info-list {
+    margin-right: 30px;
 }
-.card__disc:last-child {
+.maintenance__info-list:last-child {
     margin-right: 0;
 }
-.disc-block-content{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: relative;
+.maintenance__info-list li {
+    background: url("../images/header/check.svg") no-repeat;
+    transform: translateY(-50%);
 }
-.disc-plan{
-    color: #0b0b0b;
-    font-size: 30px;
-    font-weight: 700;
-    margin:12px 0 0 0;
+.maintenance__info-item {
+    font-size: 18px;
+    padding-left: 27px;
+    margin-bottom: 10px;
 }
-.disc__off {
-    position: absolute;
-    top: -10px;
-    right: -5px;
-    font-weight: 400;
-    color: #2468ff;
+.maintenance__info-item:last-child {
+    margin-bottom: 0;
 }
-.disc-value{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: #05060f;
-    font-size: 22px;
-    line-height: 1.25;
+.maintenance__btn-box {
+    padding: 50px 20px 25px 20px;
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    box-shadow: 5px 5px #2468ff;
+    text-align: center;
+}
+.maintenance__btn-header {
+    margin-bottom: 35px;
+    font-size: 40px;
     font-weight: 500;
-    margin: 5px 0 50px 0;
 }
-.disc-text {
-    font-size: 15px;
+.maintenance__btn {
+    margin-bottom: 10px;
+}
+.maintenance__btn-info {
+    font-size: 18px;
     font-weight: 400;
-    margin-top: 15px;
 }
-.disc__button-box {
-    margin-top: 50px;
+/* ===================================HELP=============================== */
+.main__help {
+    padding: 50px 0 50px 0;
+}
+.help__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.help__content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.help__content__title {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.help__content-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.help__info-box {
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
+.help__info-listp {
+    margin-right: 20px;
+}
+.help__info-listp li {
+    background: url("../images/header/checkred.svg") no-repeat;
+}
+.help__info-itemp {
+    font-size: 18px;
+    padding-left: 27px;
+    margin-bottom: 10px;
+}
+.help__info-itemp:last-child {
+    margin-bottom: 0;
+}
+.help__info-listm li {
+    background: url("../images/icon-xred.svg") no-repeat;
+
+}
+.help__info-itemm {
+    font-size: 18px;
+    padding-left: 27px;
+    margin-bottom: 16px;
+}
+.help__info-itemm:last-child {
+    margin-bottom: 0;
+}
+/* ===================================FOOTER-CUSTOM=============================== */
+.main__faq {
+    padding: 50px 0 50px 0;
+}
+.faq__inner {
+}
+.faq__content {
+    text-align: center;
+}
+.faq__content__title {
+}
+.tit {
+}
+.faq__acc {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq__acc-item {
+    padding: 20px 20px 20px 50px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.faq__acc-item:last-child {
+    margin-bottom: 0;
+}
+.faq__acc-link {
+}
+.faq__acc-head {
+    position: relative;
+    max-width: 600px;
+}
+.faq__acc-head span{
+    position: relative;
+    max-width: 600px;
+}
+.faq__acc-head::before,
+.faq__acc-head::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -115px;
+    width: 25px;
+    height: 2px;
+    background-color: #2468ff;
+    border-radius: 2px;
+}
+.faq__acc-head::after {
+    transform: rotate(90deg);
+    transition: all .3s;
+}
+.faq__acc-link--active .faq__acc-head::after {
+    transform: rotate(0deg);
+}
+.faq__acc-text {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 15px 0 0 15px;
+}
+/* ===================================BOOKCALL=============================== */
+.main__bookcall {
+    padding: 50px 0 40px 0;
+}
+.bookcall__inner {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #2468ff;
+    border-radius: 10px;
+}
+.bookcall__content {
+    color: #fff;
+}
+.bookcall__content-text {
+    color: #fff;
+}
+.bookcall__btn {
+    color: #fff;
+    text-align: center;
+    background-color: #121212;
+    border: 2px solid #121212;
+    border-radius: 5px;
+    padding: 10px 27px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    transition: all .3s;
+    margin-top: 50px;
+}
+.bookcall__btn:hover {
+    box-shadow: 5px 5px 0px #BDF003;
+}
 /* ===================================FOOTER-CUSTOM=============================== */
 .footer__inner-custom {
     color:#0b0b0b;
@@ -2045,7 +2189,6 @@ html, body {
         height: 100px;
     }
     .testimonials__content-quote {
-        font-size: ;
     }
     .testimonials__user {
         display: flex;
@@ -2068,6 +2211,15 @@ html, body {
     .call__content {
         text-align: center;
         margin: 0 0 30px 0;
+    }
+    /* --------------------------------------------- */
+    .maintenance__info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .maintenance__info-list {
+        margin: 0 0 10px 0;
     }
 }
 /* ===================================950=============================== */
@@ -2227,6 +2379,58 @@ html, body {
     .footer__custom-item::after {
         display: none;
     }
+    /* ----------------------------card1--------------------------- */
+    .main__pricing {
+        padding: 50px 0 50px 0;
+        height: 100%;
+    }
+    .pricing__heading {
+        margin-bottom: 40px;
+    }
+    .pricing__content-text {
+        display: flex;
+        margin: 0 auto;
+        width: auto;
+    }
+    .container__card-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards {
+        width: 210px;
+        margin-bottom: 30px;
+    }
+    .cards:last-child {
+        margin-bottom: 0;
+    }
+    .pricings-text {
+        text-align: center;
+        font-size: 14px;
+    }
+    .container__popup {
+        width: 500px;
+    }
+    .pricing__info-box {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .pricing__info-row {
+        margin-bottom: 25px;
+    }
+    .pricing__info-row:last-child {
+        margin-bottom: 0;
+    }
+    .price-btn {
+        margin-top: 35px;
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+    .pricing-text {
+        margin-top: 10px;
+        font-size: 13px;
+    }
 }
 /* ===================================650=============================== */
 @media (max-width: 650px) {
@@ -2258,6 +2462,35 @@ html, body {
     /* --------------------------------------------- */
     .call__form {
         width: 400px;
+    }
+    /* --------------------------------------------- */
+    .maintenance__content {
+        text-align: center;
+    }
+    .maintenance__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .maintenance__info-box{
+        margin-bottom: 25px;
+    }
+    /* --------------------------------------------- */
+    .help__info-box {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 370px;
+    }
+    .help__info-listp {
+        margin-bottom: 16px;
+    }
+    .help__info-itemp {
+        margin-bottom: 16px;
+    }
+    .help__info-itemp:last-child {
+        margin-bottom: 0;
     }
 }
 /* ===================================550=============================== */
@@ -2538,6 +2771,55 @@ html, body {
         font-weight: 400;
         line-height: 90%;
         margin-top: 5px;
+    }
+    /* --------------------------------Card---------------------------- */
+    .container__popup {
+        height: 500px;
+        width: 320px
+    }
+    .card__in {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        height: 160px;
+    }
+    .price-value {
+        margin-bottom: 5px;
+    }
+    .price-btn {
+        margin-top: 0;
+    }
+    .pricing-text {
+        text-align: center;
+    }
+    .pricing__info-box {
+        display: none;
+    }
+    .price__button-box {
+        margin-top: 20px;
+    }
+    /* ----------------------------card2-3-------------------------------- */
+    .container__card-inner-second {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards-second {
+        margin: 0 0 30px 0;
+    }
+    .cards-second:last-child {
+        margin: 0 0 0 0;
+    }
+    .card-second {
+        height: 160px;
+    }
+    .card-thr {
+        height: 160px;
+    }
+    /* -------------------------------------------------- */
+    .bookcall__btn {
+        margin-top: 20px;
     }
 }
 /* ===================================360=============================== */

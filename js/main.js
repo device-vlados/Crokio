@@ -40,7 +40,6 @@ function update() {
     }
 }
 
-
 $(function () {
 // -----------------------------------------------------------------------------
     $('.testimonials__slider').slick({
@@ -88,10 +87,17 @@ $(function () {
         e.preventDefault()
         $('.header__nav').toggleClass('header__nav--open')
     })
-
-    $('.prices-btn').on('click', function (e) {
+// -----------------------------------------------------------------------------
+    $('.faq__acc-link').on('click', function (e) {
         e.preventDefault()
-        $('.popup-bg').toggleClass('popup-bg--open')
+        if ($(this).hasClass('faq__acc-link--active')) {
+            $(this).removeClass('faq__acc-link--active')
+            $(this).children('.faq__acc-text').slideUp()
+        } else {
+            $('.faq__acc-link').removeClass('faq__acc-link--active')
+            $('.faq__acc-text').slideUp()
+            $(this).addClass('faq__acc-link--active')
+            $(this).children('.faq__acc-text').slideDown()
+        }
     })
-
-});
+})
