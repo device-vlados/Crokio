@@ -131,6 +131,7 @@ html, body {
     align-items: center;
 }
 .header__top-logo {
+    font-size: 35px;
 }
 .burger {
 }
@@ -447,18 +448,49 @@ html, body {
 .after__list {
 }
 .after__list-item {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 1s;
+}
+.after__list-item.active-item {
     max-width: 950px;
     padding: 30px 60px 70px 60px;
     border: 2px solid #0b0b0b;
     background-color: #fff;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     position: relative;
-    transition: all .3s;
+    /* transition: all .3s; */
+    transform: translate(0px, 30%);
+    opacity: 1;
 }
-.after__list-item:hover {
+.anim-items.active-item {
+    max-width: 950px;
+    padding: 30px 60px 70px 60px;
+    border: 2px solid #0b0b0b;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+    /* transition: all .3s; */
+    transform: translate(0px, -25%) rotate(2deg);
+    opacity: 1;
+}
+.anim-item.active-item {
+    max-width: 950px;
+    padding: 30px 60px 70px 60px;
+    border: 2px solid #0b0b0b;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: -50px;
+    position: relative;
+    /* transition: all .3s; */
+    transform: translate(0px, -70%) rotate(-2deg);
+    opacity: 1;
+}
+/* .after__list-item:hover {
     box-shadow: 5px 5px 0px #2468ff;
-}
+} */
 .after__list-title {
     display: flex;
     align-items: center;
@@ -707,7 +739,7 @@ html, body {
     margin-right: 20px;
     padding: 10px;
     transform: translate3d(0, 0, 0);
-    animation: scrl 20s linear infinite;
+    animation: scrl 6s linear infinite;
     transition: all .3s;
 }
 .build__scroll-item:hover {
@@ -987,51 +1019,54 @@ html, body {
 }
 .outcomes__heading {
     text-align: center;
+    margin-bottom: 40px;
 }
 .qoutcomes__scrolls {
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: -50px;
     display: flex;
     align-items: center;
     width: 3421px;
-    border-top: 2px solid #0b0b0b;
-    border-bottom: 2px solid #0b0b0b;
-    background-color: #F6F6F6;
-    transform: rotate(-5deg);
     z-index: 5;
-    opacity: .4;
+    font-size: 35px;
+    cursor: default;
+    color: #888888;
+    animation: scr 250s linear infinite;
 }
 .qoutcomes__scrolls-item {
-    width: 300px;
+    width: 800px;
     text-align: center;
     border-radius: 25px;
     margin-right: 20px;
+    margin-left: 20px;
     padding: 25px 10px;
     white-space: nowrap;
     transform: translate3d(0, 0, 0);
-    animation: scrr 25s linear infinite;
+}
+.qoutcomes__scrolls-item:hover {
+    color:#2468ff
 }
 .qoutcomes__scroll {
-    margin-top: 70px;
-    margin-left: -50px;
+    margin-top: 10px;
+    margin-left: -950px;
     display: flex;
     align-items: center;
     width: 3421px;
-    border-top: 2px solid #0b0b0b;
-    border-bottom: 2px solid #0b0b0b;
-    background-color: #F6F6F6;
-    transform: rotate(5deg);
-    z-index: 10;
+    font-size: 40px;
+    cursor: default;
+    animation: scrr 250s linear infinite;
 }
 .qoutcomes__scroll-item {
-    width: 300px;
+    width: 800px;
     text-align: center;
     border-radius: 25px;
     margin-right: 20px;
     padding: 25px 10px;
     white-space: nowrap;
     transform: translate3d(0, 0, 0);
-    animation: scr 25s linear infinite;
+}
+.qoutcomes__scroll-item:hover {
+    color:#2468ff
 }
 @keyframes scr {
     100% {
@@ -1040,7 +1075,10 @@ html, body {
 }
 @keyframes scrr {
     100% {
-        transform: translate3d(100%, 0, 0);
+        transform: translate3D(100%, 0, 0);
+    }
+    0% {
+        transform: translate3d(0%, 0, 0);
     }
 }
 /* ===================================BUSINES=============================== */
@@ -1090,7 +1128,21 @@ html, body {
     padding: 100px 0 100px 0;
     background-color: #F6F6F6;
 }
-.container {
+.date__inner {
+    padding-top: 30px;
+}
+.date__heading {
+    text-align: center;
+}
+.date__heading__title {
+}
+.tit {
+}
+.date__heading-text {
+}
+.text {
+}
+.calendly-inline-widget {
 }
 .call__inner {
     display: flex;
@@ -1236,39 +1288,30 @@ html, body {
 .call__form-btn:hover {
     box-shadow: 5px 5px 0px #0b0b0b;
 }
-/* ===================================MEET=============================== */
-.meet__cal {
+/* ===================================CALL=============================== */
+.date__inner {
+    position: relative;
 }
-.meet__heading {
+.calendly-inline-widget {
+    z-index: 5;
 }
-.meet__heading__title {
-}
-.meet__heading-text {
-}
-.meet__cal-box {
-    width: 400px;
-    height: 600px;
-    padding: 30px;
-    background-color: #F6F6F6;
-}
-.meet__form {
-}
-.date-pic {
-    cursor: pointer;
-    padding: 10px 35px 10px 15px;
-    border: 1px solid #0b0b0b;
-    border-radius: 5px;
-    width: 100%;
-}
-.meet__info {
-}
-.date {
-}
-.time {
+.date__inner::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -160px;
+    background: url("../images/circle.svg") no-repeat;
+    width: 285px;
+    height: 285px;
 }
 
 /* ===================================PRICING=============================== */
-/* --------------------------------close popup----------------------------- */
+.main__pricing {
+    padding: 50px 0 50px 0;
+}
+.pricing__heading {
+    margin-bottom: 40px;
+}
 .container-card {
     transform: translateX(-150%);
 }
@@ -1309,303 +1352,146 @@ html, body {
     font-weight: 400;
     margin-top: 15px;
 }
-/* -------------------------------cards2----------------------------- */
-.container__card-inner-second {
+/* ===================================PRICE=============================== */
+.main__price {
+}
+.container {
+}
+.price__inner {
+
+}
+.price__heading {
+    margin-bottom: 30px;
+}
+.price__heading__title {
+    margin-bottom: 0;
+}
+.price__heading-text {
+    max-width: 600px;
+}
+.price__card-inf {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
-.cards-second {
-    width: 220px;
-    height: 230px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 2px solid #0b0b0b;
-    -webkit-box-shadow: 5px 5px #2468ff;
-            box-shadow: 5px 5px #2468ff;
-    overflow: hidden;
-    margin-right: 50px;
-}
-.cards-second:last-child {
-    margin-right: 0;
-}
-.card-second {
-    width: 220px;
-    height: 240px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 2px solid #0b0b0b;
-    -webkit-box-shadow: 5px 5px #2468ff;
-            box-shadow: 5px 5px #2468ff;
-    overflow: hidden;
-    position: relative;
-}
-.card-second::before {
-    content: "10% off";
-    position: absolute;
-    font-size: 20px;
-    font-weight: 400;
-    color: #2468ff;
-    top: 10px;
-    right: 15px;
-}
-.price-number-second {
-    color: #0b0b0b;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-.price-btn {
-    color: #fff;
-    text-align: center;
-    background-color: #121212;
-    border: 2px solid #121212;
-    border-radius: 5px;
-    padding: 10px 27px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 22px;
-    transition: all .3s;
-    margin-top: 20px;
-}
-.price-btn:hover {
-    box-shadow: 5px 5px #2468ff;
-}
-.price-button {
-    color: #fff;
-    text-align: center;
-    background-color: #121212;
-    border: 2px solid #121212;
-    border-radius: 5px;
-    padding: 10px 27px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 22px;
-    transition: all .3s;
-    margin-top: 20px;
-}
-.price-button:hover {
-    box-shadow: 5px 5px #2468ff;
-}
-/* -------------------------------cards3----------------------------- */
-.card-thr {
-    width: 220px;
-    height: 240px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 2px solid #0b0b0b;
-    -webkit-box-shadow: 5px 5px #2468ff;
-            box-shadow: 5px 5px #2468ff;
-    overflow: hidden;
-    position: relative;
-}
-.card-thr:before {
-    content: "20% off";
-    position: absolute;
-    font-size: 20px;
-    font-weight: 400;
-    color: #2468ff;
-    top: 10px;
-    right: 15px;
-}
-/* --------------------------------popup----------------------------- */
-.main__pricing {
-    padding: 50px 0 100px 0;
-    height: 100vh;
-}
-.pricing__heading {
-    text-align: center;
-    margin-bottom: 70px;
-}
-.pricing__heading__title {
-    line-height: 110%;
-}
-.popup-area {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-.popup-first {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .4s;
-    z-index: 50;
-}
-.popup-first:target {
-    opacity: 1;
-    visibility: visible;
-    transition: all .4s;
-    z-index: 50;
-}
-.popup-sec {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .4s;
-    z-index: 50;
-}
-.popup-sec:target {
-    opacity: 1;
-    visibility: visible;
-    transition: all .4s;
-}
-.popup-thr {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .7);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .4s;
-    z-index: 50;
-}
-.popup-thr:target {
-    opacity: 1;
-    visibility: visible;
-    transition: all .4s;
-}
-.container__popup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 30px;
-    background-color: #F6F6F6;
-    border-radius: 10px;
-    border: 2px solid #0b0b0b;
-    -webkit-box-shadow: 10px 3px 32px 0px rgba(34, 60, 80, 0.1);
-    -moz-box-shadow: 10px 3px 32px 0px rgba(34, 60, 80, 0.1);
-    box-shadow: 10px 3px 32px 0px rgba(34, 60, 80, 0.1);
-    transform: translateX(0%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    transform: translate(-50%, -50%);
-}
-.popup-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-.card__in {
+.price__info-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 40px;
 }
-.card {
-    width: 220px;
-    height: 240px;
+.price__info-list {
+    margin-right: 50px;
+    padding: 35px 40px;
+    background-color: #fbfbfb;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 6px 49px -21px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 49px -21px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 49px -21px rgba(34, 60, 80, 0.2);
+}
+.price__info-list li {
+    background: url("../images/header/checkred.svg") no-repeat;
+}
+.price__info-item {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+.price__info-item:last-child {
+    margin-bottom: 0;
+}
+.price__info-lists {
+}
+.price__info-lists li {
+    background: url("../images/icon-xred.svg") no-repeat;
+}
+.price__infro-items {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+.price__infro-items:last-child {
+    margin-bottom: 0;
+}
+.price__card-box {
+    margin-right: 40px;
+    width: 270px;
+    height: 270px;
     background: #fff;
     padding: 1rem;
     border-radius: 1rem;
     border: 2px solid #0b0b0b;
     -webkit-box-shadow: 5px 5px #2468ff;
-            box-shadow: 5px 5px #2468ff;
+    box-shadow: 5px 5px #2468ff;
     overflow: hidden;
-}
-.pricing-block-content{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
-.price-number{
-    color: #0b0b0b;
-    font-size: 22px;
+.price__card-sale {
+    font-style: 16px;
     font-weight: 400;
-    margin-bottom: 5px;
-}
-.price-value{
-    display: -webkit-box;
-    display: -ms-flexbox;
+    color: #2468ff;
     display: flex;
-    color: #05060f;
-    font-size: 26px;
-    line-height: 1.25;
-    font-weight: 500;
-    margin-bottom: 40px;
+    justify-content: end;
 }
-.pricing-text {
+.price__card-price {
+    white-space: nowrap;
+    font-size: 28px;
+    margin-top: 20px;
+}
+.price__card-btn {
+    margin-top: 70px;
+}
+.price__card-info {
     font-size: 15px;
     font-weight: 400;
     margin-top: 15px;
-}
-.pricing__bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.pricing__content {
-    text-align: center;
-    margin: 0px 0 40px 0;
-}
-.pricing__content__title {
-    line-height: 110%;
-}
-.pricing__content-text {
-    display: flex;
-    margin: 0 auto;
-    width: 600px;
-}
-.pricing__info-box {
-    display: flex;
-    justify-content: space-around;
-}
-.pricing__info-row {
-    margin-right: 30px;
-    margin-bottom: 15px;
-    position: relative;
-}
-.pricing__info-row li {
-    background: url("../images/header/check.svg") left no-repeat;
-}
-.pricing__info-item {
-    font-size: 16px;
-    margin-bottom: 25px;
-    padding-left: 25px;
-}
-.pricing__info-item:last-child {
-    margin-bottom: 0;
-}
-.price__button-box {
-    margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
+.price__btn-bottom {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.price__content-box {
+    display: none;
+}
+.price__content-box.active {
+    padding: 20px 20px 40px 50px;
+    background-color: #F4E8DC;
+    border-radius: 10px;
+    display: block;
+}
 /* ===================================MAINTENANCE=============================== */
 .main__maintenance {
-    padding: 50px 0 80px 0;
+    padding: 20px 0 80px 0;
 }
 .maintenance__content__title {
     margin-bottom: -4px;
 }
 .maintenance__content-text {
     max-width: 600px;
+}
+.maintenance__acc-item {
+    padding: 20px 20px 20px 50px;
+    background-color: #f1eeee;
+    border-radius: 10px;
+}
+.maintenance__acc-info {
+    padding: 30px 0 30px 0;
+}
+.maintenance__acc-link {
+    cursor: pointer;
+}
+.maintenance__acc-link span {
+    margin-right: 10px;
+}
+.maintenance__acc-link--active .maintenance__acc-head::before {
+    transform: rotate(180deg);
 }
 .maintenance__info {
     display: flex;
@@ -1639,6 +1525,7 @@ html, body {
 .maintenance__btn-box {
     padding: 50px 20px 25px 20px;
     border: 2px solid #0b0b0b;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px #2468ff;
     text-align: center;
@@ -1654,6 +1541,88 @@ html, body {
 .maintenance__btn-info {
     font-size: 18px;
     font-weight: 400;
+}
+/* ===================================RAITING=============================== */
+.main__raiting {
+    padding: 0px 0 50px 0;
+}
+.raiting__inner {
+}
+.raiting__box {
+}
+.raiting__box-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.raiting__box-item {
+    text-align: center;
+    position: relative;
+}
+/* .times::after {
+    content: "i";
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F6F6F6;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+.times:hover::after {
+    content: "For example, the average salary of a team of 5 people (web designer, developer, copywriter, marketing specialist, and project manager) in 2023 in the USA will be $27,450 dollars per month - Glassdoor.com";
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    width: 250px;
+    height: 100px;
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    font-size: 13px;
+}
+.raiting::after {
+    content: "i";
+    position: absolute;
+    top: -15px;
+    left: 150px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F6F6F6;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+.raiting:hover::after {
+    content: "Based on 150+ customer satisfaction ratings since 2019";
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    width: 210px;
+    height: 50px;
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    font-size: 13px;
+} */
+.raiting__box-text {
+    margin-top: 10px;
+}
+.head {
+    margin: 0 0 10px 0;
+}
+.raiting__box-number {
+    font-size: 37px;
+    color: #2468ff;
+    margin: 20px 0;
 }
 /* ===================================HELP=============================== */
 .main__help {
@@ -1804,6 +1773,9 @@ html, body {
 .footer__inner-custom {
     color:#0b0b0b;
     position: relative;
+}
+.footer__custom-logo-link {
+    font-size: 35px;
 }
 .footer__custom {
     display: flex;
@@ -2221,6 +2193,23 @@ html, body {
     .maintenance__info-list {
         margin: 0 0 10px 0;
     }
+    .price__card-inf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .price__info-box {
+        margin: 0 0 30px 0;
+    }
+    .price__card-box {
+        width: 250px;
+    }
+    /* --------------------------------------------- */
+    .raiting__box-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 /* ===================================950=============================== */
 @media (max-width: 950px) {
@@ -2430,6 +2419,32 @@ html, body {
     .pricing-text {
         margin-top: 10px;
         font-size: 13px;
+    }
+    /* --------------------------------------------- */
+    .price__info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .price__info-list {
+        margin: 0 0 20px;
+        padding: 35px 45px 35px 10px;
+    }
+    .price__info-lists {
+        padding: 0 0 0 10px;
+    }
+    /* --------------------------------------------- */
+    .times::after {
+        display: none;
+    }
+    .raiting::after {
+        display: none;
+    }
+    /* --------------------------------------------- */
+    .faq__acc-text {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 15px 0 0 0;
     }
 }
 /* ===================================650=============================== */
@@ -2820,6 +2835,53 @@ html, body {
     /* -------------------------------------------------- */
     .bookcall__btn {
         margin-top: 20px;
+    }
+    /* -------------------------------------------------- */
+    .maintenance__acc-item {
+        padding: 20px 20px 20px 20px;
+        background-color: #f1eeee;
+        border-radius: 10px;
+    }
+    .maintenance__info-item {
+        font-size: 16px;
+        padding-left: 27px;
+        margin-bottom: 10px;
+    }
+    .maintenance__btn-box {
+        padding: 40px 10px 20px 10px;
+    }
+    .maintenance__btn-header {
+        font-size: 30px;
+    }
+    .maintenance__btn-info {
+        font-size: 16px;
+    }
+    .price__info-item {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        padding-left: 25px;
+    }
+    .price__infro-items {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-left: 25px;
+    }
+    .price__content-box.active {
+        padding: 20px 20px 40px 20px;
+        background-color: #F4E8DC;
+        border-radius: 10px;
+        display: block;
+    }
+    .price__card-box {
+        width: 220px;
+        height: 250px;
+        margin-right: 0;
+        padding-left: 20px;
+    }
+    .price__card-price {
+        font-size: 25px;
     }
 }
 /* ===================================360=============================== */

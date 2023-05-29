@@ -38,7 +38,8 @@ function update() {
         prev.disabled = false;
         next.disabled = false;
     }
-}
+};
+
 
 $(function () {
 // -----------------------------------------------------------------------------
@@ -99,5 +100,24 @@ $(function () {
             $(this).addClass('faq__acc-link--active')
             $(this).children('.faq__acc-text').slideDown()
         }
-    })
-})
+    });
+});
+
+function onEntry(entry) {
+    entry.forEach((change) => {
+        if (change.isIntersecting) {
+            change.target.classList.add("active-item");
+        }
+    });
+};
+
+let options = {
+    threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll(".after__list-item");
+
+for (let elm of elements) {
+    observer.observe(elm);
+};
+

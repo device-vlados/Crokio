@@ -1,3 +1,20 @@
+const btns = document.querySelectorAll('.source__btn')
+
+btns.forEach((btn, index) =>{
+    btn.addEventListener('click', () =>{
+        console.log(index)
+    const divs = document.querySelectorAll('.price__content-box')
+    divs.forEach(div =>{
+        div.classList.remove('active')
+    });
+    divs[index].classList.add('active')
+    });
+});
+
+
+
+
+
 $(function () {
 // -----------------------------------------------------------------------------
     $('.testimonials__slider').slick({
@@ -28,4 +45,24 @@ $(function () {
             $(this).children('.faq__acc-text').slideDown()
         }
     })
+
+    $('.maintenance__acc-link').on('click', function (e) {
+        e.preventDefault()
+        if ($(this).hasClass('maintenance__acc-link--active')) {
+            $(this).removeClass('maintenance__acc-link--active')
+            $(this).children('.maintenance__acc-info').slideUp()
+        } else {
+            $('.maintenance__acc-link').removeClass('maintenance__acc-link--active')
+            $('.maintenance__acc-info').slideUp()
+            $(this).addClass('maintenance__acc-link--active')
+            $(this).children('.maintenance__acc-info').slideDown()
+        }
+    })
+
+    // $('.busines__btn').click(function(){
+    //     $(".price__content-box").fadeToggle(100, 0, 100);
+    // });  
+    // $('.commerce__btn').click(function(){
+    //     $(".price__content-boxs").fadeToggle(100, 0, 100);
+    // });  
 })
