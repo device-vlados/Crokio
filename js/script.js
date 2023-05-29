@@ -59,6 +59,13 @@ $(function () {
         }
     })
 
+    $(".prices-btn").on("click", function (e) {
+        e.preventDefault()
+        var id = $(this).attr('href'),
+            top = $(id).offset().top
+        $('body,html').animate({ scrollTop: top }, 800)
+    })
+
     // $('.busines__btn').click(function(){
     //     $(".price__content-box").fadeToggle(100, 0, 100);
     // });  

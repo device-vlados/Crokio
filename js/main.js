@@ -101,6 +101,13 @@ $(function () {
             $(this).children('.faq__acc-text').slideDown()
         }
     });
+
+    $(".head").on("click", function (e) {
+        e.preventDefault()
+        var id = $(this).attr('href'),
+            top = $(id).offset().top
+        $('body,html').animate({ scrollTop: top }, 800)
+    })
 });
 
 function onEntry(entry) {

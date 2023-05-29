@@ -1769,6 +1769,53 @@ html, body {
 .bookcall__btn:hover {
     box-shadow: 5px 5px 0px #BDF003;
 }
+/* ===================================FAQ-PAGE=============================== */
+.header {
+}
+.faqq__top {
+    padding: 40px 0 40px 0;
+    background-color: #0b0b0b;
+    color: #fff;
+}
+.container {
+}
+.faqq__top-inner {
+    display: flex;
+    align-items: center;
+}
+.faqq__top-logo {
+    margin-right: 50px;
+    font-size: 35px;
+}
+.faqq__nav {
+    display: flex;
+    width: 100%;
+}
+.faqq__nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faqq__nav-item {
+    font-size: 16px;
+    font-weight: 400;
+}
+.faqq__nav-link {
+}
+.center {
+    position: relative;
+}
+.center::before {
+    content: "|";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.faqq-tit {
+    margin-top: 40px;
+}
 /* ===================================FOOTER-CUSTOM=============================== */
 .footer__inner-custom {
     color:#0b0b0b;
@@ -2514,6 +2561,23 @@ html, body {
     }
     .help__info-itemp:last-child {
         margin-bottom: 0;
+    }
+
+    .faqq__nav-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+    }
+    .faqq__nav-item {
+        margin-bottom: 8px;
+    }
+    .faqq__nav-item:last-child {
+        margin-bottom: 0px;
+    }
+    .center::before {
+        display: none;
     }
 }
 /* ===================================550=============================== */
