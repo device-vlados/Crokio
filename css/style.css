@@ -2492,6 +2492,14 @@ html, body {
         margin-bottom: 25px;
     }
     /* --------------------------------------------- */
+    .cards {
+        width: 240px;
+        height: 150px;
+    }
+    .pricings-plan {
+        margin-bottom: 7px;
+    }
+    /* --------------------------------------------- */
     .help__info-box {
         display: flex;
         flex-direction: column;
@@ -2569,6 +2577,9 @@ html, body {
         padding: 10px 10px 20px 10px;
         text-align: left;
     }
+    .after__list-item img {
+        display: none;
+    }
     .after__list-item:last-child {
         margin: 0 0 0 0;
     }
@@ -2584,8 +2595,8 @@ html, body {
         letter-spacing: -0.019em;
         color: rgba(0, 0, 0, 0.8);
         margin-bottom: 10px;
-        text-align: right;
-        padding-left: 55px;
+        /* text-align: right; */
+        padding-left: 0px;
     }
     .after__list img {
         position: absolute;
