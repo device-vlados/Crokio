@@ -1676,6 +1676,33 @@ html, body {
 .help__info-itemm:last-child {
     margin-bottom: 0;
 }
+/* ===================================PRIVACY=============================== */
+.main__privacy {
+    padding: 200px 0 50px 0;
+}
+.privacy__inner {
+}
+.privacy__heading {
+}
+.privacy__heading-title {
+}
+.tit {
+}
+.privacy__info {
+}
+.privacy__info-item {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.privacy__info-item:last-child {
+    margin-bottom: 0;
+}
+.privacy__info-head {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 /* ===================================FOOTER-CUSTOM=============================== */
 .main__faq {
     padding: 50px 0 50px 0;
